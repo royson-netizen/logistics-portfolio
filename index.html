@@ -2,27 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Royson | AI Logistics Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kangwana Tech | AI Logistics Infrastructure</title>
     <style>
-        body { font-family: sans-serif; background: #111; color: #eee; text-align: center; padding: 50px; }
-        .box { border: 1px solid #333; padding: 20px; display: inline-block; border-radius: 8px; }
-        h1 { color: #0070f3; }
-        a { color: #0070f3; text-decoration: none; }
+        :root { --neon: #00ff41; --dark: #0d1117; --dim: #8b949e; }
+        body { margin: 0; background: var(--dark); color: #c9d1d9; font-family: 'Courier New', monospace; padding: 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
+        
+        /* The Terminal Container */
+        .terminal-window { width: 100%; max-width: 800px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; box-shadow: 0 20px 50px rgba(0,0,0,0.7); overflow: hidden; margin-top: 50px; }
+        .terminal-header { background: #0d1117; padding: 10px 15px; border-bottom: 1px solid #30363d; display: flex; gap: 8px; align-items: center; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+        .title { margin-left: 10px; font-size: 0.8rem; color: var(--dim); }
+        
+        /* The Content */
+        .content { padding: 30px; line-height: 1.6; }
+        h1 { color: var(--neon); margin: 0 0 10px 0; font-size: 1.8rem; text-shadow: 0 0 10px rgba(0,255,65,0.2); }
+        .role { color: var(--dim); font-size: 0.9rem; margin-bottom: 30px; border-bottom: 1px solid #30363d; padding-bottom: 20px; display: block;}
+        
+        .command { color: var(--neon); font-weight: bold; }
+        .output { color: #c9d1d9; margin-bottom: 20px; display: block; }
+        .blink { animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* The "Sell" Section */
+        .capabilities { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .cap-box { border: 1px solid #30363d; padding: 15px; border-radius: 4px; background: #0d1117; }
+        .cap-title { color: #ffbd2e; font-weight: bold; display: block; margin-bottom: 5px; }
+
+        /* Buttons */
+        .actions { margin-top: 40px; display: flex; gap: 15px; flex-wrap: wrap; }
+        .btn { text-decoration: none; padding: 12px 25px; border-radius: 4px; font-weight: bold; transition: 0.3s; border: 1px solid var(--neon); background: transparent; color: var(--neon); }
+        .btn:hover { background: var(--neon); color: black; box-shadow: 0 0 20px rgba(0,255,65,0.4); }
+        .btn-secondary { border-color: var(--dim); color: var(--dim); }
+        .btn-secondary:hover { background: var(--dim); color: white; }
+
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Royson - AI & Automation</h1>
-        <p>building logistics automation for nairobi cbd.</p>
-        <p>currently deploying ai dispatchers on microsoft azure.</p>
-        <hr style="border: 0.5px solid #333;">
-        <p><a href="https://twitter.com/your-username">follow the build on twitter</a></p>
+
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+            <span class="title">admin@kangwana-tech:~</span>
+        </div>
+        <div class="content">
+            <span class="output">Last login: Today from Nairobi, KE</span>
+            <br>
+            <span class="command">root@kangwana:~$ whoami</span><br>
+            <h1>ROYSON KANGWANA</h1>
+            <span class="role">AI Engineer | Cloud Architect | Logistics Automation Specialist</span>
+
+            <span class="command">root@kangwana:~$ cat capabilities.txt</span><br>
+            <div class="output">
+                Deploying enterprise-grade AI agents that automate complex business workflows.
+            </div>
+
+            <div class="capabilities">
+                <div class="cap-box">
+                    <span class="cap-title">🚀 Hyper-Fast NLP</span>
+                    Powered by Groq LPU technology for instant, near-zero latency customer support.
+                </div>
+                <div class="cap-box">
+                    <span class="cap-title">☁️ Cloud Native</span>
+                    Hosted on Microsoft Azure Virtual Machines for 99.9% uptime and scalability.
+                </div>
+                <div class="cap-box">
+                    <span class="cap-title">🇰🇪 Local Context</span>
+                    Custom-trained on Nairobi logistics data (Routes, Matatu stages, KES Pricing).
+                </div>
+                <div class="cap-box">
+                    <span class="cap-title">🤖 24/7 Dispatcher</span>
+                    Handles quotes, routing, and customer inquiries automatically on WhatsApp.
+                </div>
+            </div>
+
+            <br>
+            <span class="command">root@kangwana:~$ ./execute_mission.sh</span><br>
+            <span class="output">Initializing contact protocols... <span class="blink">_</span></span>
+
+            <div class="actions">
+                <a href="https://wa.me/14155238886?text=join%20KIGO-KENYA" class="btn">Test Live Agent (WhatsApp)</a>
+                <a href="https://twitter.com/kangwanatech" class="btn btn-secondary">Twitter / X</a>
+                <a href="mailto:your-email@uon.ac.ke" class="btn btn-secondary">Hire Me</a>
+            </div>
+        </div>
     </div>
-    <a href="https://wa.me/14155238886?text=join%20KIGO-KENYA" 
-   target="_blank"
-   style="position:fixed; width:70px; height:70px; bottom:30px; right:30px; background-color:#25d366; color:#FFF; border-radius:50px; text-align:center; font-size:35px; box-shadow: 3px 3px 5px #666; z-index:1000; display: flex; align-items: center; justify-content: center; text-decoration: none;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 40px;">
-    <span style="position: absolute; top: -10px; right: 0; background: red; color: white; font-size: 10px; padding: 2px 6px; border-radius: 10px; font-weight: bold; font-family: sans-serif;">KIGO AI</span>
-</a>
+
+    <p style="margin-top: 20px; font-size: 0.8rem; color: #444;">System: Linux (Ubuntu) • Stack: Python/Flask/Groq</p>
+
 </body>
 </html>
